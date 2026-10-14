@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0f19;
+}
+
+.loader-contenedor {
+    display: flex;
+    gap: 12px;
+}
+
+.punto {
+    width: 20px;
+    height: 20px;
+    background-color: #6366f1;
+    border-radius: 50%;
+    animation-name: ola;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.punto:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.punto:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.punto:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes ola {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.6);
+        opacity: 1;
+    }
+}

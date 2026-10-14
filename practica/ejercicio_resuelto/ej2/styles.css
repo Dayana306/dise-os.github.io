@@ -1,0 +1,62 @@
+  
+body {
+margin: 0;
+padding: 0;
+background-color: #0f172a;
+font-family: system-ui, -apple-system, sans-serif;
+}
+
+.navbar {
+background-color: #1e293b;
+padding: 1rem 2rem;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 1.5rem;
+}
+
+.nav-item {
+opacity: 0;
+transform: translateX(-50px);
+animation-name: deslizarDerecha;
+animation-duration: 0.5s;
+animation-timing-function: ease-out;
+animation-fill-mode: both;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.2s; }
+.nav-item:nth-child(3) { animation-delay: 0.3s; }
+.nav-item:nth-child(4) { animation-delay: 0.4s; }
+.nav-item:nth-child(5) { animation-delay: 0.5s; }
+
+.nav-link {
+text-decoration: none;
+color: #94a3b8;
+font-weight: 500;
+font-size: 1.1rem;
+transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+color: #38bdf8;
+}
+
+@keyframes deslizarDerecha {
+0% {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
